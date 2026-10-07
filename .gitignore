@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+*.egg-info/
+dist/
+build/
+quickstart_output.png
+to_ignore/
+
+# STM raw-data folders are local-only, except the bundled large_area/ example
+mexpsimu/data/stm_data/*/
+mexpsimu/data/afm_data/*
+#!mexpsimu/data/stm_data/large_area/

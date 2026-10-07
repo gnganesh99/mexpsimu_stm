@@ -1,0 +1,8 @@
+numpy>=1.23
+pytest>=7.0 # for dev only
+matplotlib
+
+
+# sidpy dataload and analyze
+git+https://github.com/gnganesh99/SciFiReaders.git
+pyNSID

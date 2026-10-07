@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mexpsimu"
+version = "0.1.1"
+description = "A microscopy experiment simulator: image scan, tip motion, and local spectroscopy against recorded scanning-probe datasets"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Yongtao Liu", email = "liuy3@ornl.gov" }]
+dependencies = [
+    "numpy>=1.23",
+    "h5py",
+    "pyNSID",
+    "SciFiReaders @ git+https://github.com/gnganesh99/SciFiReaders.git",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["mexpsimu"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
